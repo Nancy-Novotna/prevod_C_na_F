@@ -1,19 +1,36 @@
 :root {
-    --color1: #eeaf61;
-    --color2: #fb9062;
-    --color3: #ee5d6c;
-    --color4: #ce4993;
-    --color5: #6a0d83;
+    --color1: rgb(238, 175, 97);
+    --color2: rgb(251, 144, 98);
+    --color3: rgb(238, 93, 108);
+    --color4: rgb(206, 73, 147);
+    --color5: rgb(106, 13, 131);
+
+    --color5_opacity: rgba(106, 13, 131, 0.3);
 
 }
 
 body {
     text-align: center;
-    background-color: var(--color3);
+    background-image: linear-gradient(to top, var(--color3) 0%, var(--color5) 100%);
+
+}
+
+@media (min-width: 1500px) {
+    section {
+        min-height: 98.8vh;
+    }
+
+    .hlavni_nadpis {
+        font-size: 110px;
+    }
+
+    .ramecek_vysledek {
+        max-width: fit-content;
+    }
+
 }
 
 section {
-    margin: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,25 +43,79 @@ section {
     flex-direction: column;
 }
 
-.hlavni_nadpis {
-    font-size: 80px;
-    font-family: 'Bungee Shade', sans-serif;
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.bungee-shade-regular {
-  font-family: "Bungee Shade", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--color5);
+.hlavni_nadpis {
+
+    font-family: 'Bungee Shade', sans-serif;
+    color: var(--color5);
+    text-shadow: 2px 5px var(--color3);
 }
 
 
 #stupne {
-    border-radius: 10px;
-    border: var(--color5);
-    box-shadow: 0px 3px 15px var(--color2);
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color1);
+    box-shadow: 2px 5px var(--color3);
+    font-size: 25px;
+    width: 550px;
+    height: 50px;
+    text-align: center;
+    font-family: 'DynaPuff', sans-serif;
+}
+
+#stupne::placeholder {
+    color: var(--color4);
+}
+
+
+input[type='submit'] {
+    height: 50px;
+    width: 180px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 5px var(--color5);
+    background-color: var(--color4);
+    font-size: 25px;
+    font-family: 'DynaPuff', sans-serif;
+    color: var(--color5);
 }
 
 .ramecek_vysledek {
-    background-color: red;
+    background-color: var(--color5_opacity);
+    width: max-content;
+    border-radius: 30px;
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: 'Honk';
+    border-radius: 55px 5px;
+}
+
+@media(max-width: 500px) {
+    body {
+        display: flex;
+        min-height: 98vh;
+    }
+
+    .hlavni_nadpis {
+        font-size: 60px;
+    }
+
+    #stupne {
+        width: fit-content;
+    }
+
+    .vysledek {
+        font-size: larger;
+    }
+
+    .ramecek_vysledek {
+        max-width: fit-content;
+    }
 }
