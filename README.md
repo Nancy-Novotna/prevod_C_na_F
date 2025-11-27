@@ -1,1 +1,1 @@
-# prevod_C_na_F
+# Převod z C na F
