@@ -1,0 +1,1 @@
+# prevod_C_na_F
