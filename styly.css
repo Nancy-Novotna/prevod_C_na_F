@@ -94,6 +94,13 @@ input[type='submit'] {
     font-size: 25px;
     font-family: 'DynaPuff', sans-serif;
     color: var(--color5);
+
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: var(--color5_opacity);
+    color: var(--color1);
 }
 
 .ramecek_vysledek {
