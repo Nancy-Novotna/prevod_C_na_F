@@ -14,7 +14,7 @@ body {
     background-image: linear-gradient(to top, var(--color3) 0%, var(--color5) 100%);
 
 }
-
+/*PC monitor */
 @media (min-width: 1500px) {
     section {
         min-height: 98.8vh;
@@ -97,6 +97,11 @@ input[type='submit'] {
     border-radius: 55px 5px;
 }
 
+.validace {
+    display: flex;
+    flex-direction: row;
+}
+/* mobil */
 @media(max-width: 500px) {
     body {
         display: flex;
