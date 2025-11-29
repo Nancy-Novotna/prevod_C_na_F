@@ -1,10 +1,10 @@
-const cursor = document.querySelector('.cursor')
+const cursor = document.querySelector('.kurzor')
 
 document.addEventListener("mousemove", (event) => {
     const { width, height } = cursor.getBoundingClientRect()
 
-    cursor.style.left = `${event.clientX - width / 2}px`
-    cursor.style.top = `${event.clientY - height / 2}px`
+    cursor.style.left = `${event.clientX - width / 5}px`
+    cursor.style.top = `${event.clientY - height / 10}px`
 
 });
 

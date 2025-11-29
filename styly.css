@@ -13,6 +13,7 @@
 
 
 body {
+    cursor: none;
     text-align: center;
     background-image: linear-gradient(to top, var(--color3) 0%, var(--color5) 100%);
 
@@ -38,12 +39,27 @@ body {
 
 }
 
+
+
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+.kurzor {
+    height: 3.5rem;
+    width: 3.5rem;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+a, input, input[type="submit"]:hover {
+    cursor: none;
+}
+
 
 
 .hlavni {
@@ -60,7 +76,6 @@ form {
 }
 
 .hlavni_nadpis {
-
     font-family: 'Bungee Shade', sans-serif;
     color: var(--color5);
     text-shadow: 2px 5px var(--color3);
